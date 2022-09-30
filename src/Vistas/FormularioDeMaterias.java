@@ -1,5 +1,7 @@
 package Vistas;
 
+import TPO4_class.Materia;
+import static TPO4_class.TPO4Grupo8Lab1.listaMaterias;
 import javax.swing.JOptionPane;
 
 
@@ -140,21 +142,29 @@ public class FormularioDeMaterias extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfIdMateriaActionPerformed
 
     private void jbNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbNuevoActionPerformed
-        try {
-           
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, "Error, ingrese numero de telefono valido.");
-        }
-
+        jtfIdMateria.setText("");
+        jtfAnioMateria.setText("");
+        jtfNombreMateria.setText("");
     }//GEN-LAST:event_jbNuevoActionPerformed
 
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
-        if ("".equals(jtfIdMateria.getText()) || "".equals(jtfNombreMateria.getText()) || "".equals(jtfAnioMateria.getText()) ) {
+        if ("".equals(jtfIdMateria.getText()) || "".equals(jtfNombreMateria.getText()) || "".equals(jtfAnioMateria.getText())) {
             JOptionPane.showMessageDialog(null, "Por favor llene todos los campos.");
         } else {
             try {
+                if (Integer.parseInt(jtfAnioMateria.getText()) > 5 || Integer.parseInt(jtfAnioMateria.getText()) < 1) {
+                    JOptionPane.showMessageDialog(null, "Ingrese un n° de año valido (1 a 5).");
+                } else {
+                    Materia materiaAux = new Materia(Integer.parseInt(jtfIdMateria.getText()), jtfNombreMateria.getText(), Integer.parseInt(jtfAnioMateria.getText()));
+                    if (listaMaterias.contains(materiaAux)) {
+                        JOptionPane.showMessageDialog(null, "Ya existe una materia asociada a este numero de legajo.");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Materia registrada satisfactoriamente.");
+                        listaMaterias.add(materiaAux);
+                    }
+                }
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Error, Algo anda mal :( .");
+                JOptionPane.showMessageDialog(null, "Error, ingrese un numero de legajo valido.");
             }
         }
     }//GEN-LAST:event_jbGuardarActionPerformed
