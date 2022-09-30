@@ -2,7 +2,7 @@
 
 <ClassDiagram name="tpo3grupo8lab1">
   <ClassDiagramComponents>
-    <Class name="Alumno" package="" visibility="public" xPosition="50.0" yPosition="101.0">
+    <Class name="Alumno" package="" visibility="public" xPosition="209.0" yPosition="91.0">
       <Fields>
         <Field name="legajo" type="Int" visibility="private"/>
         <Field name="apellido" type="String" visibility="private"/>

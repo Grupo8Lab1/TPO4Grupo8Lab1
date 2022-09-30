@@ -1,6 +1,7 @@
 package TPO4_class;
 
 import Vistas.FormularioDeAlumnos;
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class TPO4Grupo8Lab1 {
@@ -12,7 +13,7 @@ public class TPO4Grupo8Lab1 {
 
         FormularioDeAlumnos form = new FormularioDeAlumnos();
         form.setVisible(true);
-<<<<<<< Updated upstream
+
         
         Materia m=new Materia(1,"Ingles 1", 1);
         Materia n=new Materia(2,"Matematicas", 1);
@@ -29,7 +30,7 @@ public class TPO4Grupo8Lab1 {
         
        
         
-=======
+
 
         Materia m1 = new Materia(1, "Ingles 1", 1);
         Materia m2 = new Materia(2, "Matematicas", 1);
@@ -44,7 +45,7 @@ public class TPO4Grupo8Lab1 {
         listaAlumnos.add(a1);
         listaAlumnos.add(a2);
 
->>>>>>> Stashed changes
+
     }
 
 }

@@ -6,14 +6,9 @@
 package Vistas;
 
 import TPO4_class.Alumno;
-<<<<<<< Updated upstream
-=======
-import TPO4_class.Materia;
-import static TPO4_class.TPO4Grupo8Lab1.listaAlumnos;
->>>>>>> Stashed changes
 import java.awt.BorderLayout;
-import java.util.HashSet;
 import javax.swing.JOptionPane;
+import static TPO4_class.TPO4Grupo8Lab1.listaAlumnos;
 
 /**
  *
@@ -295,10 +290,10 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Por favor llene todos los campos.");
         } else {
             try {
-<<<<<<< Updated upstream
+
                 Alumno n = new Alumno(Integer.parseInt(jtfLegajo.getText()),jtfApellido.getText(),jtfNombre.getText());
                 //agregar alumno
-=======
+
 
                 Alumno AlumAux = new Alumno(Integer.parseInt(jtfLegajo.getText()), jtfApellido.getText(), jtfNombre.getText());
                 if (listaAlumnos.contains(AlumAux)) {
@@ -308,7 +303,7 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Alumno registrado satisfactoriamente.");
                 }
 
->>>>>>> Stashed changes
+
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Error, Algo anda mal :( .");
             }
