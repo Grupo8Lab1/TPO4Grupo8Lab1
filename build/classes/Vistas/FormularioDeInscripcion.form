@@ -48,7 +48,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jComboBox1" max="32767" attributes="0"/>
+                          <Component id="jcbAlumnoInscripcion" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -57,7 +57,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jComboBox2" max="32767" attributes="0"/>
+                          <Component id="jcbMateriasInscripcion" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -71,12 +71,12 @@
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcbMateriasInscripcion" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcbAlumnoInscripcion" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="265" max="32767" attributes="0"/>
                   <Component id="jbBuscar" min="-2" max="-2" attributes="0"/>
@@ -113,7 +113,7 @@
             <Property name="text" type="java.lang.String" value="Alumno"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox1">
+        <Component class="javax.swing.JComboBox" name="jcbAlumnoInscripcion">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
@@ -128,7 +128,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox2">
+        <Component class="javax.swing.JComboBox" name="jcbMateriasInscripcion">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
@@ -140,7 +140,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbMateriasInscripcionActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
