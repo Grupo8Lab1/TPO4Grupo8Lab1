@@ -290,7 +290,8 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Por favor llene todos los campos.");
         } else {
             try {
-                Alumno n = new Alumno(Long.parseLong(jtfLegajo.getText()),jtfApellido.getText(),jtfNombre.getText());
+                Alumno n = new Alumno(Integer.parseInt(jtfLegajo.getText()),jtfApellido.getText(),jtfNombre.getText());
+                //agregar alumno
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Error, Algo anda mal :( .");
             }
