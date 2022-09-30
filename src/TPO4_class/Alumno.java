@@ -64,7 +64,11 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno: " + nombre + " " + apellido + ", legajo: " + legajo ;
+        return "Alumno: " + nombre + " " + apellido + ", legajo: " + legajo;
+    }
+
+    public int getLegajo() {
+        return legajo;
     }
 
     public void agregarMateria(Materia materia) {
@@ -75,6 +79,14 @@ public class Alumno {
             JOptionPane.showMessageDialog(null, "Alumno inscripto satisfactoriamente.");
             materias.add(materia);
         }
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     public int cantidadMaterias() {

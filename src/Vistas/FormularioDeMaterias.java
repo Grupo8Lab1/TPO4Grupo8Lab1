@@ -156,15 +156,15 @@ public class FormularioDeMaterias extends javax.swing.JPanel {
                     JOptionPane.showMessageDialog(null, "Ingrese un n° de año valido (1 a 5).");
                 } else {
                     Materia materiaAux = new Materia(Integer.parseInt(jtfIdMateria.getText()), jtfNombreMateria.getText(), Integer.parseInt(jtfAnioMateria.getText()));
-                    if (listaMaterias.contains(materiaAux)) {
+                    if (listaMaterias.containsKey(materiaAux.getIdMateria())) {
                         JOptionPane.showMessageDialog(null, "Ya existe una materia asociada a este numero de legajo.");
                     } else {
                         JOptionPane.showMessageDialog(null, "Materia registrada satisfactoriamente.");
-                        listaMaterias.add(materiaAux);
+                        listaMaterias.put(materiaAux.getIdMateria(), materiaAux);
                     }
                 }
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Error, ingrese un numero de legajo valido.");
+                JOptionPane.showMessageDialog(null, "Error, ingrese un numero de legajo/anio valido.");
             }
         }
     }//GEN-LAST:event_jbGuardarActionPerformed

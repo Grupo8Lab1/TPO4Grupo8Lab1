@@ -291,10 +291,10 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
         } else {
             try {
                 Alumno AlumAux = new Alumno(Integer.parseInt(jtfLegajo.getText()), jtfApellido.getText(), jtfNombre.getText());
-                if (listaAlumnos.contains(AlumAux)) {
+                if (listaAlumnos.containsKey(AlumAux.getLegajo())) {
                     JOptionPane.showMessageDialog(null, "Este n° de Legajo ya se encontraba asociado a otro alumno.");
                 } else {
-                    listaAlumnos.add(AlumAux);
+                    listaAlumnos.put(AlumAux.getLegajo(), AlumAux);
                     JOptionPane.showMessageDialog(null, "Alumno registrado satisfactoriamente.");
                 }
 
