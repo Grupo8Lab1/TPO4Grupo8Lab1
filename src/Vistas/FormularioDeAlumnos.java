@@ -5,6 +5,7 @@
  */
 package Vistas;
 
+import TPO4_class.Alumno;
 import java.awt.BorderLayout;
 import javax.swing.JOptionPane;
 
@@ -289,6 +290,7 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Por favor llene todos los campos.");
         } else {
             try {
+                Alumno n = new Alumno(Long.parseLong(jtfLegajo.getText()),jtfApellido.getText(),jtfNombre.getText());
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Error, Algo anda mal :( .");
             }

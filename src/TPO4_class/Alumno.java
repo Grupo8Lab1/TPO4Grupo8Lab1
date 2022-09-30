@@ -80,5 +80,16 @@ public class Alumno {
     public int cantidadMaterias() {
         return materias.size();
     }
+    
+    public boolean agregarAlumno(){
+        if (materias.contains(legajo)) {
+            JOptionPane.showMessageDialog(null, "Este numero de legao ya se encontraba registrado");
+            return false;
+        } else {
+            materias.add(legajo, nombre);
+            JOptionPane.showMessageDialog(null, "Alumno registrado.");
+            return true;
+        }
+    }
 
 }
