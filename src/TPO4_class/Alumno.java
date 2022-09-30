@@ -13,10 +13,11 @@ import javax.swing.JOptionPane;
  * @author Santi
  */
 public class Alumno {
+
     private int legajo;
     private String apellido;
     private String nombre;
-    private ArrayList <Materia> materias;
+    private ArrayList<Materia> materias;
 
     public ArrayList<Materia> getMaterias() {
         return materias;
@@ -98,15 +99,18 @@ public class Alumno {
         return "Alumno{" + "legajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + ", materias=" + materias + '}';
     }
 
-    public void agregarMateria(Materia materia){
-    
-        if(this.materias.contains(materia)){
-        JOptionPane.showMessageDialog(null, "El alumno ya se encontraba inscripto en esa materia.");
-        }else {JOptionPane.showMessageDialog(null, "Alumno inscripto satisfactoriamente.");
-        materias.add(materia);
+    public void agregarMateria(Materia materia) {
+
+        if (this.materias.contains(materia)) {
+            JOptionPane.showMessageDialog(null, "El alumno ya se encontraba inscripto en esa materia.");
+        } else {
+            JOptionPane.showMessageDialog(null, "Alumno inscripto satisfactoriamente.");
+            materias.add(materia);
         }
     }
-    
-    
-    
+
+    public int cantidadMaterias() {
+        return materias.size();
+    }
+
 }
