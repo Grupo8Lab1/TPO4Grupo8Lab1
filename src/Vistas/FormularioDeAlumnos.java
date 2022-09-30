@@ -6,13 +6,9 @@
 package Vistas;
 
 import TPO4_class.Alumno;
-<<<<<<< Updated upstream
-=======
-import static TPO4_class.TPO4Grupo8Lab1.listaAlumnos;
->>>>>>> Stashed changes
 import java.awt.BorderLayout;
-import javax.swing.JOptionPane;
 import static TPO4_class.TPO4Grupo8Lab1.listaAlumnos;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -294,14 +290,6 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Por favor llene todos los campos.");
         } else {
             try {
-<<<<<<< Updated upstream
-
-                Alumno n = new Alumno(Integer.parseInt(jtfLegajo.getText()),jtfApellido.getText(),jtfNombre.getText());
-                //agregar alumno
-
-
-=======
->>>>>>> Stashed changes
                 Alumno AlumAux = new Alumno(Integer.parseInt(jtfLegajo.getText()), jtfApellido.getText(), jtfNombre.getText());
                 if (listaAlumnos.contains(AlumAux)) {
                     JOptionPane.showMessageDialog(null, "Este n° de Legajo ya se encontraba asociado a otro alumno.");
@@ -310,10 +298,6 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Alumno registrado satisfactoriamente.");
                 }
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Error, Ingrese un numero de legajo valido.");
             }
