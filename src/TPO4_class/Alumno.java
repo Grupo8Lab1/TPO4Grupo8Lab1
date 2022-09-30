@@ -4,7 +4,7 @@
  */
 package TPO4_class;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Objects;
 import javax.swing.JOptionPane;
 
@@ -17,19 +17,19 @@ public class Alumno {
     private int legajo;
     private String apellido;
     private String nombre;
-    private ArrayList<Materia> materias;
+    private HashSet<Materia> materias;
 
-    public ArrayList<Materia> getMaterias() {
+    public HashSet<Materia> getMaterias() {
         return materias;
-    }
-
-    public Alumno() {
     }
 
     public Alumno(int legajo, String apellido, String nombre) {
         this.legajo = legajo;
         this.apellido = apellido;
         this.nombre = nombre;
+    }
+
+    public Alumno() {
     }
 
     @Override
