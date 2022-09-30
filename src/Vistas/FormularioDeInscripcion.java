@@ -41,7 +41,7 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
 
         jMenuItem1 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
-        jbBuscar = new javax.swing.JButton();
+        jbInscribir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -52,10 +52,10 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jbBuscar.setText("Buscar");
-        jbBuscar.addActionListener(new java.awt.event.ActionListener() {
+        jbInscribir.setText("Inscribir");
+        jbInscribir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbBuscarActionPerformed(evt);
+                jbInscribirActionPerformed(evt);
             }
         });
 
@@ -88,7 +88,7 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jbBuscar))
+                        .addComponent(jbInscribir))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -115,7 +115,7 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
                     .addComponent(jLabel3)
                     .addComponent(jcbAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 265, Short.MAX_VALUE)
-                .addComponent(jbBuscar)
+                .addComponent(jbInscribir)
                 .addContainerGap())
         );
 
@@ -131,9 +131,9 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
+    private void jbInscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbInscribirActionPerformed
 
-    }//GEN-LAST:event_jbBuscarActionPerformed
+    }//GEN-LAST:event_jbInscribirActionPerformed
 
     private void jcbMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbMateriaActionPerformed
         // TODO add your handling code here:
@@ -145,7 +145,7 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton jbBuscar;
+    private javax.swing.JButton jbInscribir;
     private javax.swing.JComboBox<String> jcbAlumno;
     private javax.swing.JComboBox<String> jcbMateria;
     // End of variables declaration//GEN-END:variables
