@@ -17,7 +17,7 @@ public class Alumno {
     private int legajo;
     private String apellido;
     private String nombre;
-    private HashSet<Materia> materias;
+    private HashSet<Materia> materias = new HashSet();
 
     public HashSet<Materia> getMaterias() {
         return materias;
@@ -64,7 +64,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno: " + nombre + " " + apellido + ", legajo: " + legajo;
+        return "Alumno: " + nombre + " " + apellido + ", legajo: " + legajo + ", Materias Inscripto: " + materias;
     }
 
     public int getLegajo() {
@@ -73,11 +73,14 @@ public class Alumno {
 
     public void agregarMateria(Materia materia) {
 
-        if (this.materias.contains(materia)) {
+        if (this.materias == null) {
+            materias.add(materia);
+            JOptionPane.showMessageDialog(null, "Alumno inscripto satisfactoriamente.");
+        } else if (this.materias.contains(materia)) {
             JOptionPane.showMessageDialog(null, "El alumno ya se encontraba inscripto en esa materia.");
         } else {
-            JOptionPane.showMessageDialog(null, "Alumno inscripto satisfactoriamente.");
             materias.add(materia);
+            JOptionPane.showMessageDialog(null, "Alumno inscripto satisfactoriamente.");
         }
     }
 

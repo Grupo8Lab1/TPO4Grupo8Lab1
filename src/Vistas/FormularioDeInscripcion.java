@@ -8,6 +8,8 @@ import TPO4_class.Alumno;
 import TPO4_class.Materia;
 import static TPO4_class.TPO4Grupo8Lab1.listaAlumnos;
 import static TPO4_class.TPO4Grupo8Lab1.listaMaterias;
+import java.util.Arrays;
+import java.util.Map;
 
 /**
  *
@@ -132,6 +134,18 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbInscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbInscribirActionPerformed
+
+        for (Materia materiaAux : listaMaterias.values()) {
+            if (jcbMateria.getSelectedItem().equals(materiaAux.getNombre())) {
+                for (Alumno alumnoAux : listaAlumnos.values()) {
+                    if (jcbAlumno.getSelectedItem().equals(alumnoAux.getNombre() + " " + alumnoAux.getApellido())) {
+                        System.out.println(alumnoAux + " " + materiaAux);
+                        alumnoAux.agregarMateria(materiaAux);
+                    }
+                }
+            }
+        }
+
 
     }//GEN-LAST:event_jbInscribirActionPerformed
 

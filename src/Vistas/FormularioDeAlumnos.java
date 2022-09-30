@@ -281,7 +281,6 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
         jtfNombre.setText("");
         jtfApellido.setText("");
         jtfLegajo.setText("");
-
     }//GEN-LAST:event_jbBorrarActionPerformed
 
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
@@ -296,6 +295,7 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
                 } else {
                     listaAlumnos.put(AlumAux.getLegajo(), AlumAux);
                     JOptionPane.showMessageDialog(null, "Alumno registrado satisfactoriamente.");
+
                 }
 
             } catch (NumberFormatException e) {
@@ -307,7 +307,6 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
     private void jbFormularioDeInscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbFormularioDeInscripcionActionPerformed
         FormularioDeInscripcion a = new FormularioDeInscripcion();
         presentarvistas(a);
-
     }//GEN-LAST:event_jbFormularioDeInscripcionActionPerformed
 
     /**
