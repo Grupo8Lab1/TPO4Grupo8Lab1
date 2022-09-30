@@ -11,6 +11,7 @@ import java.util.Objects;
  * @author Santi
  */
 public class Materia {
+
     private int idMateria;
     private String nombre;
     private int anio;
@@ -20,10 +21,8 @@ public class Materia {
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 67 * hash + this.idMateria;
-        hash = 67 * hash + Objects.hashCode(this.nombre);
-        hash = 67 * hash + this.anio;
+        int hash = 7;
+        hash = 37 * hash + this.idMateria;
         return hash;
     }
 
@@ -39,13 +38,7 @@ public class Materia {
             return false;
         }
         final Materia other = (Materia) obj;
-        if (this.idMateria != other.idMateria) {
-            return false;
-        }
-        if (this.anio != other.anio) {
-            return false;
-        }
-        return Objects.equals(this.nombre, other.nombre);
+        return this.idMateria == other.idMateria;
     }
 
     public Materia(int idMateria, String nombre, int anio) {
@@ -82,6 +75,5 @@ public class Materia {
     public String toString() {
         return "Materia{" + "idMateria=" + idMateria + ", nombre=" + nombre + ", anio=" + anio + '}';
     }
-    
-    
+
 }

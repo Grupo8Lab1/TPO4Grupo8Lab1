@@ -46,7 +46,6 @@ public class Alumno {
         hash = 79 * hash + this.legajo;
         hash = 79 * hash + Objects.hashCode(this.apellido);
         hash = 79 * hash + Objects.hashCode(this.nombre);
-        hash = 79 * hash + Objects.hashCode(this.materias);
         return hash;
     }
 
@@ -68,10 +67,7 @@ public class Alumno {
         if (!Objects.equals(this.apellido, other.apellido)) {
             return false;
         }
-        if (!Objects.equals(this.nombre, other.nombre)) {
-            return false;
-        }
-        return Objects.equals(this.materias, other.materias);
+        return Objects.equals(this.nombre, other.nombre);
     }
 
     public void setLegajo(int legajo) {
