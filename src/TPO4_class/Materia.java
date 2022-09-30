@@ -4,6 +4,8 @@
  */
 package TPO4_class;
 
+import java.util.Objects;
+
 /**
  *
  * @author Santi
@@ -14,6 +16,36 @@ public class Materia {
     private int anio;
 
     public Materia() {
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 67 * hash + this.idMateria;
+        hash = 67 * hash + Objects.hashCode(this.nombre);
+        hash = 67 * hash + this.anio;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Materia other = (Materia) obj;
+        if (this.idMateria != other.idMateria) {
+            return false;
+        }
+        if (this.anio != other.anio) {
+            return false;
+        }
+        return Objects.equals(this.nombre, other.nombre);
     }
 
     public Materia(int idMateria, String nombre, int anio) {

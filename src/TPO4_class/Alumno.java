@@ -4,6 +4,10 @@
  */
 package TPO4_class;
 
+import java.util.ArrayList;
+import java.util.Objects;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Santi
@@ -12,6 +16,15 @@ public class Alumno {
     private int legajo;
     private String apellido;
     private String nombre;
+    private ArrayList <Materia> materias;
+
+    public ArrayList<Materia> getMaterias() {
+        return materias;
+    }
+
+    public void setMaterias(ArrayList<Materia> materias) {
+        this.materias = materias;
+    }
 
     public Alumno() {
     }
@@ -24,6 +37,40 @@ public class Alumno {
 
     public int getLegajo() {
         return legajo;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 79 * hash + this.legajo;
+        hash = 79 * hash + Objects.hashCode(this.apellido);
+        hash = 79 * hash + Objects.hashCode(this.nombre);
+        hash = 79 * hash + Objects.hashCode(this.materias);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Alumno other = (Alumno) obj;
+        if (this.legajo != other.legajo) {
+            return false;
+        }
+        if (!Objects.equals(this.apellido, other.apellido)) {
+            return false;
+        }
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        return Objects.equals(this.materias, other.materias);
     }
 
     public void setLegajo(int legajo) {
@@ -48,7 +95,16 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno{" + "legajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + '}';
+        return "Alumno{" + "legajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + ", materias=" + materias + '}';
+    }
+
+    public void agregarMateria(Materia materia){
+    
+        if(this.materias.contains(materia)){
+        JOptionPane.showMessageDialog(null, "El alumno ya se encontraba inscripto en esa materia.");
+        }else {JOptionPane.showMessageDialog(null, "Alumno inscripto satisfactoriamente.");
+        materias.add(materia);
+        }
     }
     
     
