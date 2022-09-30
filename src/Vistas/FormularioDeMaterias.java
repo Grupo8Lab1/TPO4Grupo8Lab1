@@ -37,8 +37,8 @@ public class FormularioDeMaterias extends javax.swing.JPanel {
         jbNuevo = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        jtfNombreMateria = new javax.swing.JTextField();
+        jtfAnioMateria = new javax.swing.JTextField();
         jbGuardar = new javax.swing.JButton();
 
         jpBorrarCliente.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -96,8 +96,8 @@ public class FormularioDeMaterias extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jpBorrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtfIdMateria)
-                            .addComponent(jTextField1)
-                            .addComponent(jTextField2))))
+                            .addComponent(jtfNombreMateria)
+                            .addComponent(jtfAnioMateria))))
                 .addContainerGap())
         );
         jpBorrarClienteLayout.setVerticalGroup(
@@ -111,11 +111,11 @@ public class FormularioDeMaterias extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpBorrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfNombreMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpBorrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfAnioMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
                 .addGroup(jpBorrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbNuevo)
@@ -149,7 +149,14 @@ public class FormularioDeMaterias extends javax.swing.JPanel {
     }//GEN-LAST:event_jbNuevoActionPerformed
 
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
-        // TODO add your handling code here:
+        if ("".equals(jtfIdMateria.getText()) || "".equals(jtfNombreMateria.getText()) || "".equals(jtfAnioMateria.getText()) ) {
+            JOptionPane.showMessageDialog(null, "Por favor llene todos los campos.");
+        } else {
+            try {
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Error, Algo anda mal :( .");
+            }
+        }
     }//GEN-LAST:event_jbGuardarActionPerformed
 
 
@@ -157,12 +164,12 @@ public class FormularioDeMaterias extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JButton jbGuardar;
     private javax.swing.JButton jbNuevo;
     private javax.swing.JLabel jlTelefono;
     private javax.swing.JPanel jpBorrarCliente;
+    private javax.swing.JTextField jtfAnioMateria;
     private javax.swing.JTextField jtfIdMateria;
+    private javax.swing.JTextField jtfNombreMateria;
     // End of variables declaration//GEN-END:variables
 }

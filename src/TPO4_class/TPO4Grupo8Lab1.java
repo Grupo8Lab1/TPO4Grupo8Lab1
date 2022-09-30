@@ -21,6 +21,7 @@ public class TPO4Grupo8Lab1 {
         Alumno a=new Alumno(1001, "Lopez", "Martin");
         Alumno b=new Alumno(1002, "Martinez", "Brenda");
         
+        
        
         
     }

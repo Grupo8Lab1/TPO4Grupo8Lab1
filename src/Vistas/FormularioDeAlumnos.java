@@ -289,8 +289,6 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Por favor llene todos los campos.");
         } else {
             try {
-                
-                
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Error, Algo anda mal :( .");
             }
