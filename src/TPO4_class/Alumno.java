@@ -64,7 +64,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno{" + "legajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + ", materias=" + materias + '}';
+        return "Alumno: " + nombre + " " + apellido + ", legajo: " + legajo ;
     }
 
     public void agregarMateria(Materia materia) {
