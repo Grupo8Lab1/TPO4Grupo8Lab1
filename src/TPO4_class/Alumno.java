@@ -23,10 +23,6 @@ public class Alumno {
         return materias;
     }
 
-    public void setMaterias(ArrayList<Materia> materias) {
-        this.materias = materias;
-    }
-
     public Alumno() {
     }
 
@@ -34,10 +30,6 @@ public class Alumno {
         this.legajo = legajo;
         this.apellido = apellido;
         this.nombre = nombre;
-    }
-
-    public int getLegajo() {
-        return legajo;
     }
 
     @Override
@@ -68,26 +60,6 @@ public class Alumno {
             return false;
         }
         return Objects.equals(this.nombre, other.nombre);
-    }
-
-    public void setLegajo(int legajo) {
-        this.legajo = legajo;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     @Override
