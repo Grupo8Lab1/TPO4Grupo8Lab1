@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Vistas;
 
 import TPO4_class.Alumno;
 import java.awt.BorderLayout;
 import static TPO4_class.TPO4Grupo8Lab1.listaAlumnos;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -310,9 +305,6 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
         presentarvistas(a);
     }//GEN-LAST:event_jbFormularioDeInscripcionActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
