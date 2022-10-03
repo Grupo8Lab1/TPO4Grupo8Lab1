@@ -4,6 +4,7 @@
  */
 package TPO4_class;
 
+import static TPO4_class.TPO4Grupo8Lab1.listaMaterias;
 import java.util.HashSet;
 import java.util.Objects;
 import javax.swing.JOptionPane;
@@ -64,7 +65,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno: " + nombre + " " + apellido + ", legajo: " + legajo + ", Materias Inscripto: " + materias;
+        return "Alumno: " + nombre + " " + apellido + ", legajo: " + legajo + ", Materias Inscripto: " + materias+" \n";
     }
 
     public int getLegajo() {
@@ -93,7 +94,7 @@ public class Alumno {
     }
 
     public int cantidadMaterias() {
-        return materias.size();
+        return listaMaterias.size();
     }
 
 }

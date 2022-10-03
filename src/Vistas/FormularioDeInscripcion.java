@@ -37,6 +37,7 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jcbAlumno = new javax.swing.JComboBox<>();
         jcbMateria = new javax.swing.JComboBox<>();
+        jtfListaInscriptos = new javax.swing.JTextField();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -74,6 +75,16 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
             }
         });
 
+        jtfListaInscriptos.setEditable(false);
+        jtfListaInscriptos.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        jtfListaInscriptos.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtfListaInscriptos.setToolTipText("");
+        jtfListaInscriptos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfListaInscriptosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -81,6 +92,7 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtfListaInscriptos)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jbInscribir))
@@ -89,12 +101,12 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jcbMateria, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(0, 158, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jcbAlumno, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jcbAlumno, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(0, 158, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -109,7 +121,9 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jcbAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 265, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jtfListaInscriptos, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addComponent(jbInscribir)
                 .addContainerGap())
         );
@@ -134,6 +148,7 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
                     if (jcbAlumno.getSelectedItem().equals(alumnoAux.getNombre() + " " + alumnoAux.getApellido())) {
                         System.out.println(alumnoAux + " " + materiaAux);
                         alumnoAux.agregarMateria(materiaAux);
+                        jtfListaInscriptos.setText("Alumno: "+alumnoAux.getNombre()+" "+alumnoAux.getApellido()+" Materia: "+materiaAux.getNombre());
                     }
                 }
             }
@@ -150,6 +165,10 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbAlumnoActionPerformed
 
+    private void jtfListaInscriptosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfListaInscriptosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfListaInscriptosActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -159,5 +178,6 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
     private javax.swing.JButton jbInscribir;
     private javax.swing.JComboBox<String> jcbAlumno;
     private javax.swing.JComboBox<String> jcbMateria;
+    private javax.swing.JTextField jtfListaInscriptos;
     // End of variables declaration//GEN-END:variables
 }
