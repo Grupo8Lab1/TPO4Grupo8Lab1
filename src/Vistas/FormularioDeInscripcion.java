@@ -2,16 +2,16 @@ package Vistas;
 
 import TPO4_class.Alumno;
 import TPO4_class.Materia;
-import static TPO4_class.TPO4Grupo8Lab1.listaAlumnos;
-import static TPO4_class.TPO4Grupo8Lab1.listaMaterias;
-
-
-
+import java.util.HashMap;
 
 public class FormularioDeInscripcion extends javax.swing.JPanel {
 
-   
-    public FormularioDeInscripcion() {
+    private final HashMap<Integer, Materia> listaMaterias;
+    private final HashMap<Integer, Alumno> listaAlumnos;
+
+    public FormularioDeInscripcion(HashMap<Integer, Materia> listaMaterias, HashMap<Integer, Alumno> listaAlumnos) {
+        this.listaAlumnos = listaAlumnos;
+        this.listaMaterias = listaMaterias;
         initComponents();
         jcbMateria.removeAllItems();
         for (Materia materias : listaMaterias.values()) {
@@ -21,10 +21,9 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
         for (Alumno alum : listaAlumnos.values()) {
             jcbAlumno.addItem(alum.getNombre() + " " + alum.getApellido());
         }
-        
+
     }
 
-   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -148,7 +147,7 @@ public class FormularioDeInscripcion extends javax.swing.JPanel {
                     if (jcbAlumno.getSelectedItem().equals(alumnoAux.getNombre() + " " + alumnoAux.getApellido())) {
                         System.out.println(alumnoAux + " " + materiaAux);
                         alumnoAux.agregarMateria(materiaAux);
-                        jtfListaInscriptos.setText("Alumno: "+alumnoAux.getNombre()+" "+alumnoAux.getApellido()+" Materia: "+materiaAux.getNombre());
+                        jtfListaInscriptos.setText("Alumno: " + alumnoAux.getNombre() + " " + alumnoAux.getApellido() + " Materia: " + materiaAux.getNombre());
                     }
                 }
             }

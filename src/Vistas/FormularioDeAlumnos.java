@@ -1,9 +1,9 @@
-
 package Vistas;
 
 import TPO4_class.Alumno;
+import TPO4_class.Materia;
 import java.awt.BorderLayout;
-import static TPO4_class.TPO4Grupo8Lab1.listaAlumnos;
+import java.util.HashMap;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,7 +15,12 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
     /**
      * Creates new form Tpo3Vista
      */
-    public FormularioDeAlumnos() {
+    private static HashMap<Integer, Alumno> listaAlumnos = new HashMap();
+    private static HashMap<Integer, Materia> listaMaterias = new HashMap();
+
+    public FormularioDeAlumnos(HashMap<Integer, Alumno> listaAlumnos, HashMap<Integer, Materia> listaMaterias) {
+        FormularioDeAlumnos.listaAlumnos = listaAlumnos;
+        FormularioDeAlumnos.listaMaterias = listaMaterias;
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -256,7 +261,7 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
         content.repaint();
     }
     private void jbFormularioDeMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbFormularioDeMateriaActionPerformed
-        FormularioDeMaterias a = new FormularioDeMaterias();
+        FormularioDeMaterias a = new FormularioDeMaterias(listaMaterias);
         presentarvistas(a);
 
     }//GEN-LAST:event_jbFormularioDeMateriaActionPerformed
@@ -285,13 +290,13 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Por favor llene todos los campos.");
         } else {
             try {
-                Alumno AlumAux = new Alumno(Integer.parseInt(jtfLegajo.getText()), jtfApellido.getText(), jtfNombre.getText());
+                Alumno AlumAux = new Alumno(Integer.parseInt(jtfLegajo.getText()), jtfApellido.getText(), jtfNombre.getText(), listaMaterias);
                 if (listaAlumnos.containsKey(AlumAux.getLegajo())) {
                     JOptionPane.showMessageDialog(null, "Este n° de Legajo ya se encontraba asociado a otro alumno.");
                 } else {
                     listaAlumnos.put(AlumAux.getLegajo(), AlumAux);
                     JOptionPane.showMessageDialog(null, "Alumno registrado satisfactoriamente.");
-                    FormularioDeInscripcion a = new FormularioDeInscripcion();
+                    FormularioDeInscripcion a = new FormularioDeInscripcion(listaMaterias, listaAlumnos);
                     presentarvistas(a);
                 }
             } catch (NumberFormatException e) {
@@ -301,16 +306,14 @@ public class FormularioDeAlumnos extends javax.swing.JFrame {
     }//GEN-LAST:event_jbGuardarActionPerformed
 
     private void jbFormularioDeInscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbFormularioDeInscripcionActionPerformed
-        FormularioDeInscripcion a = new FormularioDeInscripcion();
+        FormularioDeInscripcion a = new FormularioDeInscripcion(listaMaterias, listaAlumnos);
         presentarvistas(a);
     }//GEN-LAST:event_jbFormularioDeInscripcionActionPerformed
 
     public static void main(String args[]) {
 
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FormularioDeAlumnos().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new FormularioDeAlumnos(listaAlumnos, listaMaterias).setVisible(true);
         });
     }
 

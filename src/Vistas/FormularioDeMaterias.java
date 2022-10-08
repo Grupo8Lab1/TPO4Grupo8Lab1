@@ -1,7 +1,7 @@
 package Vistas;
 
 import TPO4_class.Materia;
-import static TPO4_class.TPO4Grupo8Lab1.listaMaterias;
+import java.util.HashMap;
 import javax.swing.JOptionPane;
 
 
@@ -18,7 +18,10 @@ public class FormularioDeMaterias extends javax.swing.JPanel {
     /**
      * Creates new form Quitar_Cliente
      */
-    public FormularioDeMaterias() {
+    private static HashMap<Integer, Materia> listaMaterias = new HashMap();
+
+    public FormularioDeMaterias(HashMap<Integer, Materia> listaMaterias) {
+        FormularioDeMaterias.listaMaterias = listaMaterias;
         initComponents();
 
     }

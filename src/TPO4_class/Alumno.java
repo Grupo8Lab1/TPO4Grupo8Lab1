@@ -4,7 +4,7 @@
  */
 package TPO4_class;
 
-import static TPO4_class.TPO4Grupo8Lab1.listaMaterias;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Objects;
 import javax.swing.JOptionPane;
@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class Alumno {
 
+    private HashMap<Integer, Materia> listadoMaterias;
     private int legajo;
     private String apellido;
     private String nombre;
@@ -24,10 +25,11 @@ public class Alumno {
         return materias;
     }
 
-    public Alumno(int legajo, String apellido, String nombre) {
+    public Alumno(int legajo, String apellido, String nombre, HashMap<Integer, Materia> listadoMaterias) {
         this.legajo = legajo;
         this.apellido = apellido;
         this.nombre = nombre;
+        this.listadoMaterias = listadoMaterias;
     }
 
     public Alumno() {
@@ -65,7 +67,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno: " + nombre + " " + apellido + ", legajo: " + legajo + ", Materias Inscripto: " + materias+" \n";
+        return "Alumno: " + nombre + " " + apellido + ", legajo: " + legajo + ", Materias Inscripto: " + materias;
     }
 
     public int getLegajo() {
@@ -94,7 +96,7 @@ public class Alumno {
     }
 
     public int cantidadMaterias() {
-        return listaMaterias.size();
+        return listadoMaterias.size();
     }
 
 }
